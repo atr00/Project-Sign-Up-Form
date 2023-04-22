@@ -16,7 +16,7 @@ body {
 }
 
 #left-banner {
-    background: url("assets/background.jpg");
+    background: url("https://github.com/atr00/Project-Sign-Up-Form/blob/main/assets/background.jpg");
     width: var(--left-banner-width);
     height: 100vh;
     background-size: cover;
