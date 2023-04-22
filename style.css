@@ -7,6 +7,7 @@
 :root {
     --left-banner-width: 33vw;
     --form-height: 34vh;
+    --left-margin: 96px;
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -75,16 +76,33 @@ body {
 #form-header > p {
     color: white;
     font-size: 1.8rem;
-    padding: 0px 96px;
 }
 
 #form-footer, #form-header {
     height: calc(0.5 * (100vh - var(--form-height)));
     display: flex;
     flex-direction: column;
+    padding-left: var(--left-margin);
 }
 
 form {
     background-color: rgba(255, 230, 255, 0.4);
     height: var(--form-height);
+}
+
+#signupBtn {
+    width: 180px;
+    padding: 8px;
+    background-color: rgba(0, 0, 153, 0.7);
+    border: none;
+    color:rgba(138, 43, 226, 1);
+    font-weight: bolder;
+    font-size: 2rem;
+    box-shadow: 0px 10px 10px rgba(138, 43, 226, 1);
+}
+
+#form-footer p {
+    margin-top: 32px;
+    color: white;
+    font-size: 1.2rem;
 }
