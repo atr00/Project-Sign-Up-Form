@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up to the New World!</title>
-    <link rel="stylesheet" href="style.css  ">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div id="left-banner">
@@ -26,8 +27,44 @@
                 You <em>know</em> you want to.
             </p>
         </div>
-        <form action="#" id="sign-up-form">
-
+        <form action="www.google.com" id="sign-up-form">
+            <div id="inner-form">
+                <h1>Let's do this!</h1>
+                <ul>
+                    <li>
+                        <div class="flex-vertical">
+                            <label for="first-name">FIRST NAME</label>
+                            <input type="text" name="first-name" required>
+                        </div>
+                        <div class="flex-vertical">
+                            <label for="last-name">LAST NAME</label>
+                            <input type="text" name="last-name" required>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex-vertical">
+                            <label for="email">EMAIL</label>
+                            <input type="email" name="email" required>
+                        </div>
+                        <div class="flex-vertical">
+                            <label for="phone">PHONE NUMBER</label>
+                            <input type="tel" name="phone" required>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex-vertical">
+                            <label for="password">PASSWORD</label>
+                            <input type="password" name="password1" id="password1" required>
+                            <span id="password1-error" class="error-message"></span>
+                        </div>
+                        <div class="flex-vertical">
+                            <label for="confirm">CONFIRM PASSWORD</label>
+                            <input type="password" name="password2" id="password2" required>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
         </form>
         <div id="form-footer">
             <button id="signupBtn" form="#sign-up-form" type="submit">

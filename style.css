@@ -7,7 +7,7 @@
 :root {
     --left-banner-width: 33vw;
     --form-height: 34vh;
-    --left-margin: 96px;
+    --side-margin: 96px;
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -82,12 +82,15 @@ body {
     height: calc(0.5 * (100vh - var(--form-height)));
     display: flex;
     flex-direction: column;
-    padding-left: var(--left-margin);
+    padding-left: var(--side-margin);
+    padding-right: var(--side-margin);
 }
 
 form {
     background-color: rgba(255, 230, 255, 0.4);
     height: var(--form-height);
+    padding: 24px var(--side-margin);
+    position: relative;
 }
 
 #signupBtn {
@@ -98,6 +101,9 @@ form {
     color:rgba(138, 43, 226, 1);
     font-weight: bolder;
     font-size: 2rem;
+}
+
+#signupBtn:hover {
     box-shadow: 0px 10px 10px rgba(138, 43, 226, 1);
 }
 
@@ -105,4 +111,58 @@ form {
     margin-top: 32px;
     color: white;
     font-size: 1.2rem;
+}
+
+#inner-form {
+    position: absolute;
+    top: 15%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    display: flex;
+    gap: var(--side-margin);
+    margin: 24px 0px;
+}
+
+label {
+    display: block;
+}
+
+input {
+    width: 20rem;
+    height: 2rem;
+    padding: 4px 12px;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid rgba(138, 43, 226, 1);
+}
+
+input:invalid {
+    outline: none;
+    border: 2px solid red;
+}
+
+input:valid {
+    outline: none;
+    border: 2px solid rgba(0, 0, 153, 0.7);
+}
+
+
+.flex-vertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
 }
